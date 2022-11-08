@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserDefineObject</title>
+
+</head>
+
+<body>
+    <script>
+        let obj = {
+            "name": "adam",
+            "title": "세상에 없는 사람",
+            "album": "genesis",
+            "attr" : "희희",
+            "disp": function(){
+                return (this.name + ":" + this.title + ":" + this.album)
+            }
+        };
+
+
+        //name 
+        console.log(obj.name);
+        console.log(obj["name"]);
+        //함수 호출-disp를 호출하면 함수의 내용이 출력
+        
+        //obj의 모든 속성을 순서대로 attr에 문자열 형태로 대입
+
+        for(attr in obj){
+            console.log(obj[attr]);
+        }
+        console.log("name"in obj);
+        console.log("age"in obj);
+        //블럭 안에서는 obj를 생략해도 됨
+        //현재 파일 내에서 window를 생략해도 window객체의
+        //요소를 불러오는 것도 이 문법 때문
+        with(obj){
+            console.log(title);
+        }
+
+        //속성
+        obj.company="adamsoft";
+        obj.title="exodus";
+        //속성 삭제
+        delete(obj.album);
+        console.log(obj);
+    </script>
+</body>
+
+</html>
