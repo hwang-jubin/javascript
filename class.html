@@ -8,10 +8,14 @@
 </head>
 <body>
     <script>
-    //member라는 클래스 생성
+    /*//member라는 클래스 생성
     class Member{
         //class안에 메서드를 만들 때는 function 생략
-        setname(name){
+        
+        getname(){
+            return "이름"
+        }
+        setname(){
             return this.name;
         
         }
@@ -20,8 +24,24 @@
     let member=new Member();
     member.setname("아담");
     //인스턴스를 이용한 메서드 호출
-    console.log(member.setname());
-    
+    console.log(member.getname());
+    //member 클래스에 getjob이라는 속성 추가
+    Member.prototype.getJob = function(){return "직업"}
+    console.log(member.getJob());
+*/
+
+//덮어씌우기가 됨. 순서적용 
+    function f(){
+        console.log("매개변수가 없는 함수")
+    }
+
+    function f(n){
+        console.log("매개변수가 있는 함수")
+
+    }
+
+    f(10);
+    f();
 </script>
 </body>
 </html>
