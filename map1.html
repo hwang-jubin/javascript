@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var map=new Map();
+        map.set("name","adam");
+        map.set("이름","주빈");
+        console.log(map);
+        console.log(map.get("name"));//adam
+        for(key of map.keys()){
+            console.log(key);
+        }
+
+        //전체 데이터 순회
+        
+    </script>
+    <div id="display"></div>
+    <script>
+        var aespa=["카리나","지젤","닝닝","윈터"];
+        let idx=0;
+        setInterval(()=>{
+            document.getElementById("display").innerHTML=
+                    aespa[idx % aespa.length];
+                    idx++},3000);
+    </script>
+</body>
+</html>
